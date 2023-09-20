@@ -872,7 +872,7 @@ Transform:
   - {fileID: 1466098144}
   - {fileID: 1977773641}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &67830092
 Prefab:
@@ -7090,6 +7090,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 262213899}
   m_Mesh: {fileID: 4300388, guid: 9a20b9dd34e6b4140a8c92991d94c731, type: 3}
+--- !u!1 &264123434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 264123436}
+  - component: {fileID: 264123435}
+  m_Layer: 0
+  m_Name: Mid_shot_look_at
+  m_TagString: Untagged
+  m_Icon: {fileID: 7240890024493199768, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &264123435
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264123434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!4 &264123436
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264123434}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.24, y: 2.19, z: -1.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1725365323}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &265678398
 Prefab:
   m_ObjectHideFlags: 0
@@ -7463,7 +7509,7 @@ Transform:
   - {fileID: 1533616135}
   - {fileID: 1789264553}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &290934909
 Prefab:
@@ -16507,6 +16553,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 836141411}
+  - component: {fileID: 836141412}
   m_Layer: 0
   m_Name: Sleeping_Guard_Cutscenes
   m_TagString: Untagged
@@ -16527,8 +16574,50 @@ Transform:
   - {fileID: 1725365323}
   - {fileID: 1395815196}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &836141412
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836141410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 3793e584dd538c84d829644ed0c401ed, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 836141410}
+  - key: {fileID: 0}
+    value: {fileID: 2043896032}
+  - key: {fileID: 0}
+    value: {fileID: 2043896032}
+  - key: {fileID: 0}
+    value: {fileID: 2043896032}
+  - key: {fileID: 114080685087167154, guid: 3793e584dd538c84d829644ed0c401ed, type: 2}
+    value: {fileID: 2043896032}
+  - key: {fileID: 114564042698356048, guid: 3793e584dd538c84d829644ed0c401ed, type: 2}
+    value: {fileID: 1725365324}
+  - key: {fileID: 0}
+    value: {fileID: 1654370825}
+  - key: {fileID: 0}
+    value: {fileID: 1654370825}
+  - key: {fileID: 0}
+    value: {fileID: 1654370825}
+  - key: {fileID: 114800841831946954, guid: 3793e584dd538c84d829644ed0c401ed, type: 2}
+    value: {fileID: 1654370825}
+  - key: {fileID: 0}
+    value: {fileID: 1392553138}
+  - key: {fileID: 114515018452882250, guid: 3793e584dd538c84d829644ed0c401ed, type: 2}
+    value: {fileID: 264123434}
+  m_ExposedReferences:
+    m_References:
+    - e34400a0b51803b44b14796b7c7da4aa: {fileID: 1654370826}
+    - a563ac23fe020a547ba4e1f9acd5fe51: {fileID: 1392553139}
 --- !u!1001 &841907257
 Prefab:
   m_ObjectHideFlags: 0
@@ -23815,7 +23904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1361990654
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23873,7 +23962,7 @@ Transform:
   - {fileID: 1994932251}
   - {fileID: 595217834}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1369792965
 Prefab:
@@ -24202,7 +24291,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_Priority: 10
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 264123436}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
@@ -24217,14 +24306,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1392553138}
-  m_LocalRotation: {x: -0.07408012, y: 0.85815555, z: -0.21161473, w: -0.46184465}
-  m_LocalPosition: {x: 4.774, y: 3.238, z: -104.868}
+  m_LocalRotation: {x: -0.052577104, y: 0.8755381, z: -0.097902395, w: -0.47019547}
+  m_LocalPosition: {x: 2.729, y: 2.263, z: -106.953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1453280242}
   m_Father: {fileID: 1395815196}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 25.571001, y: -122.437004, z: 4.3440003}
+  m_LocalEulerAnglesHint: {x: 21.953001, y: -121.049, z: 0}
 --- !u!1 &1395815195
 GameObject:
   m_ObjectHideFlags: 0
@@ -24891,8 +24980,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShowGuides: 1
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_HorizontalDamping: 0.5
-  m_VerticalDamping: 0.5
+  m_HorizontalDamping: 10
+  m_VerticalDamping: 10
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0.1
@@ -26628,7 +26717,7 @@ Transform:
   - {fileID: 113185344}
   - {fileID: 1341338661}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1566270357
 Prefab:
@@ -27644,6 +27733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1654370827}
   - component: {fileID: 1654370826}
+  - component: {fileID: 1654370828}
   m_Layer: 0
   m_Name: CM_OTS_shot
   m_TagString: Untagged
@@ -27689,7 +27779,24 @@ Transform:
   - {fileID: 362520104}
   m_Father: {fileID: 1395815196}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 17.411001, y: 117.63701, z: -0.246}
+  m_LocalEulerAnglesHint: {x: 2.057161, y: 331.674, z: 8.765385}
+--- !u!95 &1654370828
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654370825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1656471105
 Prefab:
   m_ObjectHideFlags: 0
@@ -28558,7 +28665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1725365322
 Prefab:
@@ -28609,6 +28716,11 @@ Prefab:
 --- !u!4 &1725365323 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4328310163252698, guid: 49be4103b035b448cb277ad3ac4b48f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1725365322}
+--- !u!1 &1725365324 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1347687833628048, guid: 49be4103b035b448cb277ad3ac4b48f7,
     type: 2}
   m_PrefabInternal: {fileID: 1725365322}
 --- !u!1001 &1742294997
@@ -36744,7 +36856,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2043896029}
-  m_LocalRotation: {x: 0.07654564, y: 0.845843, z: -0.13058609, w: 0.51150537}
+  m_LocalRotation: {x: 0.073430784, y: 0.8114233, z: -0.12527217, w: 0.5661334}
   m_LocalPosition: {x: -7.31, y: 3.02, z: -105.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -37457,7 +37569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 33.536003, y: -73.77901, z: 40.444}
 --- !u!1001 &2100339662
 Prefab:
