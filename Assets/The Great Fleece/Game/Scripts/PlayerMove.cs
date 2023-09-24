@@ -6,9 +6,12 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 	private NavMeshAgent _agent;
-
+	private Animator _animator;
+	private Vector3 _target;
     void Start () 
 	{
+		_animator = GetComponentInChildren<Animator>();
+		_animator.SetBool("walk", false);
 		_agent = GetComponent<NavMeshAgent>();
 	}
 	
@@ -21,8 +24,14 @@ public class PlayerMove : MonoBehaviour {
 			if(Physics.Raycast(ray, out hit))
 			{
 				_agent.destination = hit.point;
+				_target = hit.point;
+				_animator.SetBool("walk", true);
 			}
 		}
+			if (Vector3.Distance(transform.position, _target) < 1.0f)
+			{
+				_animator.SetBool("walk", false);
+			}
 	}
 	
 }
