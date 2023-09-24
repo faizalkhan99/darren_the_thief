@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Experimental.UIElements;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 	private NavMeshAgent _agent;
@@ -24,4 +24,5 @@ public class PlayerMove : MonoBehaviour {
 			}
 		}
 	}
+	
 }
