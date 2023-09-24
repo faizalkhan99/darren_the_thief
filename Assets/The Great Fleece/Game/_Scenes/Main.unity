@@ -14786,7 +14786,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &494077533
 Canvas:
   m_ObjectHideFlags: 0
@@ -15013,7 +15013,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 10
+  m_Speed: 3.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -15078,9 +15078,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.80057144
-  m_Height: 4.9207134
+  m_Height: 3.9850698
   m_Direction: 1
-  m_Center: {x: 0, y: 1.4603567, z: 0.30057144}
+  m_Center: {x: 0, y: 1.9281785, z: 0.30057144}
 --- !u!33 &499752820
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15131,7 +15131,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!1001 &504146853
 PrefabInstance:
@@ -49866,14 +49866,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043896029}
-  m_LocalRotation: {x: 0.24492028, y: -0.7060075, z: 0.28897098, w: 0.5983839}
-  m_LocalPosition: {x: 12.99, y: 18.98, z: 28.95}
+  m_LocalRotation: {x: 0.28807768, y: -0.6516419, z: 0.2933113, w: 0.63745004}
+  m_LocalPosition: {x: 15.44, y: 18.77, z: 29.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 44.519, y: -99.433, z: 0}
+  m_LocalEulerAnglesHint: {x: 48.55, y: -91.32, z: -0.13}
 --- !u!114 &2043896035
 MonoBehaviour:
   m_ObjectHideFlags: 0

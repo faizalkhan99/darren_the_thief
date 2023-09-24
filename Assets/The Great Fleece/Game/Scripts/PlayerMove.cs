@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour {
 				_animator.SetBool("walk", true);
 			}
 		}
-			if (Vector3.Distance(transform.position, _target) < 1.0f)
+			if (Vector3.Distance(transform.position, _target) < 1.5f)
 			{
 				_animator.SetBool("walk", false);
 			}
