@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject _winCutscene;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.CompareTag("Player"))
+        {
+            _winCutscene.SetActive(true);
+        }
     }
 }
