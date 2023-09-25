@@ -6,9 +6,14 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 	[SerializeField] private GameObject _coin;
+	
 	private NavMeshAgent _agent;
+	
 	private Animator _animator;
+	
 	private Vector3 _target;
+
+	[SerializeField] private AudioClip _coinFlip;
     void Start () 
 	{
 		_animator = GetComponentInChildren<Animator>();
@@ -40,7 +45,7 @@ public class PlayerMove : MonoBehaviour {
             if (Physics.Raycast(ray, out hit))
             {
                 Instantiate(_coin, hit.point,Quaternion.identity);
-				//play a sound
+				AudioSource.PlayClipAtPoint(_coinFlip, hit.point);
             }
         }
 	
