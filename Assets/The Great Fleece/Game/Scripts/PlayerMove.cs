@@ -5,6 +5,7 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
+	[SerializeField] private GameObject _coin;
 	private NavMeshAgent _agent;
 	private Animator _animator;
 	private Vector3 _target;
@@ -32,6 +33,18 @@ public class PlayerMove : MonoBehaviour {
 			{
 				_animator.SetBool("walk", false);
 			}
+		if(Input.GetKeyDown(KeyCode.Mouse1)) 
+		{
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                Instantiate(_coin, hit.point,Quaternion.identity);
+				//play a sound
+            }
+        }
+	
+	
 	}
 	
 }

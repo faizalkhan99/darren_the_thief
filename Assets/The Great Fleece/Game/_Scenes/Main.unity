@@ -16010,6 +16010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322dd48abd4632e4ca6e6adcdc02c311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _coin: {fileID: 1667124884920464, guid: 4aee20544b12e47219af132208bc5ccb, type: 3}
 --- !u!54 &499752823
 Rigidbody:
   m_ObjectHideFlags: 0
