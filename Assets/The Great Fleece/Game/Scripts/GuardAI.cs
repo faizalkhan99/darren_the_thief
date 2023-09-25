@@ -33,7 +33,8 @@ public class GuardAI : MonoBehaviour
             _agent.destination = wayPoints[_currentWaypoint].position;
             float dist = Vector3.Distance(transform.position, wayPoints[_currentWaypoint].position);
             
-            if (dist < 1 && (_currentWaypoint == 0 || _currentWaypoint == wayPoints.Count - 1)) _animator.SetBool("walk", false);
+            if (dist < 1
+                && (_currentWaypoint == 0 || _currentWaypoint == wayPoints.Count - 1)) _animator.SetBool("walk", false);
             else _animator.SetBool("walk", true);
             
             if (dist < 1.0f && !_paused)

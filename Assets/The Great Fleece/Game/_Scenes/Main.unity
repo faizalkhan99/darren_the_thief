@@ -13376,8 +13376,9 @@ GameObject:
   - component: {fileID: 402953528}
   - component: {fileID: 402953527}
   - component: {fileID: 402953526}
+  - component: {fileID: 402953529}
   m_Layer: 0
-  m_Name: Eye (1)
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13461,6 +13462,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402953524}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &402953529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402953524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e87985f86623f142ad175aaa882b601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCutscene: {fileID: 203144284}
+  _player: {fileID: 499752816}
 --- !u!1001 &403693336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15135,6 +15150,7 @@ GameObject:
   - component: {fileID: 476398962}
   - component: {fileID: 476398961}
   - component: {fileID: 476398960}
+  - component: {fileID: 476398963}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
@@ -15220,6 +15236,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476398958}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &476398963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476398958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e87985f86623f142ad175aaa882b601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCutscene: {fileID: 203144284}
+  _player: {fileID: 499752816}
 --- !u!1001 &482617525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26223,8 +26253,9 @@ GameObject:
   - component: {fileID: 929619805}
   - component: {fileID: 929619804}
   - component: {fileID: 929619803}
+  - component: {fileID: 929619806}
   m_Layer: 0
-  m_Name: Eye (4)
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26308,6 +26339,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929619801}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &929619806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929619801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e87985f86623f142ad175aaa882b601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCutscene: {fileID: 203144284}
+  _player: {fileID: 499752816}
 --- !u!1001 &929902276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29555,6 +29600,7 @@ GameObject:
   - component: {fileID: 1087345751}
   - component: {fileID: 1087345750}
   - component: {fileID: 1087345749}
+  - component: {fileID: 1087345752}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
@@ -29640,6 +29686,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087345747}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1087345752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087345747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e87985f86623f142ad175aaa882b601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCutscene: {fileID: 203144284}
+  _player: {fileID: 499752816}
 --- !u!1 &1087421415
 GameObject:
   m_ObjectHideFlags: 0
@@ -30031,6 +30091,7 @@ GameObject:
   - component: {fileID: 1110149032}
   - component: {fileID: 1110149031}
   - component: {fileID: 1110149030}
+  - component: {fileID: 1110149033}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
@@ -30116,6 +30177,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110149028}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1110149033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110149028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e87985f86623f142ad175aaa882b601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCutscene: {fileID: 203144284}
+  _player: {fileID: 499752816}
 --- !u!1001 &1111742327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37114,8 +37189,9 @@ GameObject:
   - component: {fileID: 1505988398}
   - component: {fileID: 1505988397}
   - component: {fileID: 1505988396}
+  - component: {fileID: 1505988399}
   m_Layer: 0
-  m_Name: Eye (3)
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37199,6 +37275,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505988394}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1505988399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505988394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e87985f86623f142ad175aaa882b601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCutscene: {fileID: 203144284}
+  _player: {fileID: 499752816}
 --- !u!1 &1508957155
 GameObject:
   m_ObjectHideFlags: 0
@@ -38386,8 +38476,9 @@ GameObject:
   - component: {fileID: 1556954730}
   - component: {fileID: 1556954729}
   - component: {fileID: 1556954728}
+  - component: {fileID: 1556954731}
   m_Layer: 0
-  m_Name: Eye (2)
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38471,6 +38562,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556954726}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1556954731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556954726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e87985f86623f142ad175aaa882b601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCutscene: {fileID: 203144284}
+  _player: {fileID: 499752816}
 --- !u!1001 &1556991057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41654,6 +41759,7 @@ GameObject:
   - component: {fileID: 1729611820}
   - component: {fileID: 1729611819}
   - component: {fileID: 1729611818}
+  - component: {fileID: 1729611821}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
@@ -41739,6 +41845,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729611816}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1729611821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729611816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e87985f86623f142ad175aaa882b601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverCutscene: {fileID: 203144284}
+  _player: {fileID: 499752816}
 --- !u!1001 &1742294997
 PrefabInstance:
   m_ObjectHideFlags: 0
