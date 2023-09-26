@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Guard1
   - coin
+  - go_guard
+  - Guard
   layers:
   - Default
   - TransparentFX

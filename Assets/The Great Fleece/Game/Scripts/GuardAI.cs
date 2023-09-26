@@ -10,7 +10,8 @@ public class GuardAI : MonoBehaviour
     private NavMeshAgent _agent;
     private bool _reversePath;
     private bool _paused;
-    private bool _iswalking;
+    public bool _coinTossed = false;
+    public Vector3 CoinPos;
     Animator _animator;
 
     void Awake()
@@ -28,7 +29,7 @@ public class GuardAI : MonoBehaviour
 
     void CalculateMovement()
     {
-        if ( ( wayPoints.Count > 0) && (wayPoints[_currentWaypoint] != null) )
+        if ( ( wayPoints.Count > 0) && (wayPoints[_currentWaypoint] != null)  && !_coinTossed)
         {
             _agent.destination = wayPoints[_currentWaypoint].position;
             float dist = Vector3.Distance(transform.position, wayPoints[_currentWaypoint].position);
@@ -62,10 +63,22 @@ public class GuardAI : MonoBehaviour
                 }
             }
         }
-        else Debug.Log("NULL");
+        else
+        {
+            if(Vector3.Distance(CoinPos, transform.position) < 2.0f)
+            {
+                StartCoroutine(InvestigateCoin());
+            }
+        }
        
     }
 
+    IEnumerator InvestigateCoin()
+    {
+        _animator.SetBool("walk", false);
+        yield return new WaitForSeconds(5.0f);
+        _coinTossed = false;
+    }
     IEnumerator PauseGuard()
     {
         if (_currentWaypoint == 0)

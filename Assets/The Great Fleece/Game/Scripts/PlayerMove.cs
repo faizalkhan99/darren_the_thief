@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 	[SerializeField] private GameObject _coin;
-	[SerializeField] public static bool _hasCoin = true;
+	[SerializeField] public static bool _hasCoin = false;
 	
 	private NavMeshAgent _agent;
 	
@@ -46,13 +46,25 @@ public class PlayerMove : MonoBehaviour {
             if (Physics.Raycast(ray, out hit))
             {
 				_hasCoin = false;
-				//_animator.SetTrigger("throw");
+				_animator.SetTrigger("throw");
                 Instantiate(_coin, hit.point,Quaternion.identity);
 				AudioSource.PlayClipAtPoint(_coinFlip, hit.point);
-            }
-        }
-	
-	
+				SendAIToCoin(hit.point);
+			}
+		}
+	}
+
+	void SendAIToCoin(Vector3 coinPos)
+	{
+		GameObject guard = GameObject.FindGameObjectWithTag("go_guard");
+		NavMeshAgent _currentAgent = guard.GetComponent<NavMeshAgent>();
+		GuardAI _currentGuard = guard.GetComponent<GuardAI>();
+		Animator _currentAnimation = guard.GetComponent<Animator>();
+
+		_currentGuard._coinTossed = true;
+		_currentAgent.SetDestination(coinPos);
+		_currentGuard.CoinPos = coinPos;						//sending coin position to GuardAI script
+		_currentAnimation.SetBool("walk", true);
 	}
 
 
