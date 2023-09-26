@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 	[SerializeField] private GameObject _coin;
+	[SerializeField] public static bool _hasCoin = true;
 	
 	private NavMeshAgent _agent;
 	
@@ -38,12 +39,14 @@ public class PlayerMove : MonoBehaviour {
 			{
 				_animator.SetBool("walk", false);
 			}
-		if(Input.GetKeyDown(KeyCode.Mouse1)) 
+		if(Input.GetKeyDown(KeyCode.Mouse1) && _hasCoin) 
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
+				_hasCoin = false;
+				//_animator.SetTrigger("throw");
                 Instantiate(_coin, hit.point,Quaternion.identity);
 				AudioSource.PlayClipAtPoint(_coinFlip, hit.point);
             }
@@ -51,5 +54,6 @@ public class PlayerMove : MonoBehaviour {
 	
 	
 	}
-	
+
+
 }
