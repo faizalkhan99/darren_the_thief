@@ -11,7 +11,7 @@ public class VoiceOverTrigger : MonoBehaviour
     {
         if(_counter == 0)
         {
-            AudioSource.PlayClipAtPoint(_voiceOver, transform.position);
+            AudioManager.Instance.PlayVooiceOver(_voiceOver);
             _counter += 1;
         }
         
