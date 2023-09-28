@@ -15,13 +15,13 @@ public class LoadingScreenManager : MonoBehaviour
     IEnumerator Load()
     {
         Debug.Log("Loading...");
-        AsyncOperation operation = SceneManager.LoadSceneAsync(2); // To Game Scene
+        AsyncOperation operation = SceneManager.LoadSceneAsync("GameScene"); // To Game Scene
 
         while (!operation.isDone)
         {
             _loadingBar.fillAmount = operation.progress;
+            yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForEndOfFrame();
     }
 
 }
