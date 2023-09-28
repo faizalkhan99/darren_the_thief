@@ -16,6 +16,9 @@ public class SecurityCameras : MonoBehaviour
     [SerializeField] private AudioClip _bgm;
     [SerializeField] private GameObject _gameOverCutscene;
 
+    [SerializeField] private Transform _securityCameraParent;
+    [SerializeField] private Animator _parentAnim;
+    [SerializeField] private float _rotY;
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -24,27 +27,23 @@ public class SecurityCameras : MonoBehaviour
     {
             if (other.CompareTag("Player"))
                 {
-                _timer += Time.deltaTime;
+                    _timer += Time.deltaTime;
                 if (_timer >= _yellowDuration && _timer < _redDuration)
-                {
-                    Debug.Log("yellow if statement");
-                    meshRenderer.material.SetColor("_TintColor", Color.yellow);
-                    animator.speed = 0f;
-                }
+                    {
+                        meshRenderer.material.SetColor("_TintColor", new Color(1f, 1f, 0, 10 / 255f));
+                        animator.speed = 0f;
+                    }
                 else if (_timer > _redDuration)
-                {
-                    Debug.Log("red if statement");
-                    meshRenderer.material.SetColor("_TintColor", Color.red);
-                    animator.speed = 0f;
-                if (_timer > _redDuration + 0.5f) {
-                    AudioManager.Instance.PauseBGM(_bgm);
-                    _gameOverCutscene.SetActive(true); }
-                }
+                    {
+                        meshRenderer.material.SetColor("_TintColor", new Color(1f, 0, 0, 10 / 255f));
+                        animator.speed = 0f;
+                        if (_timer > _redDuration + 0.1f) 
+                        {
+                            Caught();
+                        }
+                    }
                 else
                 {
-                    //_timer = 0.0f;
-                    Debug.Log("white else statement");
-                    //meshRenderer.material.color = Color.white;
                     animator.speed = 1.0f;
                 }
 
@@ -53,8 +52,17 @@ public class SecurityCameras : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        meshRenderer.material.SetColor("_TintColor", Color.white);
+        meshRenderer.material.SetColor("_TintColor", new Color(0.5f, 0.5f, 137 / 255f, 10 / 255f));
         animator.speed = 1.0f;
         _timer = 0f;
+    }
+
+    void Caught()
+    {
+        AudioManager.Instance.PauseBGM(_bgm);
+        _gameOverCutscene.SetActive(true);
+        _securityCameraParent.rotation = Quaternion.Euler(0, _rotY, 0);
+        _parentAnim.gameObject.SetActive(false);
+        meshRenderer.material.SetColor("_TintColor", new Color(1f, 0, 0, 10 / 255f));
     }
 }
