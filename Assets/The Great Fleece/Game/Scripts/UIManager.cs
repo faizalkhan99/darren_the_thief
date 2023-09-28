@@ -28,12 +28,16 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void MainMenu()
+    public void ToMainMenu()
     {
         SceneManager.LoadScene(0); //0 = MainMenuScene
     }
     public void Quit()
     {
         Application.Quit();
+    }
+    public void Play(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName); //To Loading Screen
     }
 }
