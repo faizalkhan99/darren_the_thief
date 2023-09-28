@@ -23,10 +23,23 @@ public class AudioManager : MonoBehaviour
     }
 
     [SerializeField] AudioSource _audio;
+    [SerializeField] AudioSource _BGM;
 
     public void PlayVooiceOver(AudioClip vo)
     {
         _audio.clip = vo;
         _audio.Play();
     }
+
+    public void PlayBGM(AudioClip bgm)
+    {
+        _BGM.clip = bgm;
+        _BGM.UnPause();
+    }
+    public void PauseBGM(AudioClip bgm)
+    {
+        _BGM.clip = bgm;
+        _BGM.Pause();
+    }
+
 }

@@ -13,6 +13,7 @@ public class SecurityCameras : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] MeshRenderer meshRenderer;
 
+    [SerializeField] private AudioClip _bgm;
     [SerializeField] private GameObject _gameOverCutscene;
 
     private void Start()
@@ -35,7 +36,9 @@ public class SecurityCameras : MonoBehaviour
                     Debug.Log("red if statement");
                     meshRenderer.material.SetColor("_TintColor", Color.red);
                     animator.speed = 0f;
-                    if(_timer > _redDuration + 0.5f) _gameOverCutscene.SetActive(true);
+                if (_timer > _redDuration + 0.5f) {
+                    AudioManager.Instance.PauseBGM(_bgm);
+                    _gameOverCutscene.SetActive(true); }
                 }
                 else
                 {
