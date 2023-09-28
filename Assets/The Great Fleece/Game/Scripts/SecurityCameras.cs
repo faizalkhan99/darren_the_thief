@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Threading;
 using UnityEngine;
 
 public class SecurityCameras : MonoBehaviour
@@ -39,7 +35,9 @@ public class SecurityCameras : MonoBehaviour
                         animator.speed = 0f;
                         if (_timer > _redDuration + 0.1f) 
                         {
-                            Caught();
+                            AudioManager.Instance.PauseBGM(_bgm);
+                            _gameOverCutscene.SetActive(true);
+                            //Caught();
                         }
                     }
                 else
@@ -57,12 +55,11 @@ public class SecurityCameras : MonoBehaviour
         _timer = 0f;
     }
 
-    void Caught()
+    private void Caught()
     {
-        AudioManager.Instance.PauseBGM(_bgm);
-        _gameOverCutscene.SetActive(true);
-        _securityCameraParent.rotation = Quaternion.Euler(0, _rotY, 0);
+        
         _parentAnim.gameObject.SetActive(false);
+        _securityCameraParent.rotation = Quaternion.Euler(0, _rotY, 0);
         meshRenderer.material.SetColor("_TintColor", new Color(1f, 0, 0, 10 / 255f));
     }
 }
