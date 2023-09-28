@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.Timeline;
+using UnityEngine.Playables;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private PlayableDirector _introCutsceneDirector;
     private static GameManager _instance;
     public static GameManager Instance
     {
@@ -25,5 +27,14 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _introCutsceneDirector.time = 62.20f;
+
+        }
     }
 }
