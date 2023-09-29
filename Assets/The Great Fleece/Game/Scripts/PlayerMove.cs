@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 	[SerializeField] private GameObject _coin;
+	[SerializeField] private GameObject _mouseClickAnimPrefab;
+	[SerializeField] private GameObject _mouseClickAnimPrefabClone;
 	[SerializeField] public static bool _hasCoin = false;
 	
 	private NavMeshAgent _agent;
@@ -30,16 +32,18 @@ public class PlayerMove : MonoBehaviour {
 			RaycastHit hit;
 			if(Physics.Raycast(ray, out hit))
 			{
+				_mouseClickAnimPrefabClone = Instantiate(_mouseClickAnimPrefab, hit.point, Quaternion.Euler(90, 0, 0));
 				_agent.destination = hit.point;
 				_target = hit.point;
 				_animator.SetBool("walk", true);
 			}
 		}
 			if (Vector3.Distance(transform.position, _target) < 1.5f)
-			{
+		{
 				_animator.SetBool("walk", false);
-			}
-		if(Input.GetKeyDown(KeyCode.Mouse1) && _hasCoin) 
+				Destroy(_mouseClickAnimPrefabClone);
+        }
+		if (Input.GetKeyDown(KeyCode.Mouse1) && _hasCoin) 
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
