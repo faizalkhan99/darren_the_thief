@@ -83,12 +83,10 @@ public class GuardAI : MonoBehaviour
     {
         if (_currentWaypoint == 0)
         {
-            Debug.Log("Start");
             yield return new WaitForSeconds(2.0f);
         }
         else if (_currentWaypoint == wayPoints.Count - 1)
         {
-            Debug.Log("End");
             yield return new WaitForSeconds(2.0f);
         }
         else yield return null;

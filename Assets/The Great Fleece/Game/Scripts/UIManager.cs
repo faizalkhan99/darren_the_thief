@@ -15,9 +15,9 @@ public class UIManager : MonoBehaviour
             return _instance;
         }
     }
-
     private void Awake()
     {
+        if (_pauseCanvas == null) Debug.Log("pause canvas is null");
         _instance = this;
     }
 
@@ -36,6 +36,34 @@ public class UIManager : MonoBehaviour
     }
     public void Play(string SceneName)
     {
+
         SceneManager.LoadScene(SceneName); //To Loading Screen
     }
+
+    [SerializeField] private bool _isPaused = false;
+    [SerializeField] private GameObject _pauseCanvas;
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!_isPaused)
+            {
+                _isPaused = true;
+                _pauseCanvas.SetActive(true);
+                Time.timeScale = 0f;
+                AudioManager.Instance.PauseBGM();
+            }
+            else
+            {
+                _isPaused = false;
+                _pauseCanvas.SetActive(false);
+                Time.timeScale = 1f;
+                AudioManager.Instance.PlayBGM();
+            }
+        }
+    }
+
+
+
+
 }

@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioSource _audio;
     [SerializeField] AudioSource _BGM;
+    [SerializeField] AudioClip _bgm;
 
     public void PlayVooiceOver(AudioClip vo)
     {
@@ -29,15 +30,16 @@ public class AudioManager : MonoBehaviour
         _audio.Play();
     }
 
-    public void PlayBGM(AudioClip bgm)
+    public void PlayBGM()
     {
-        _BGM.clip = bgm;
+        if(_bgm == null) _BGM.clip = _bgm;
         _BGM.UnPause();
+        _audio.UnPause();
     }
-    public void PauseBGM(AudioClip bgm)
+    public void PauseBGM()
     {
-        _BGM.clip = bgm;
+        if (_bgm == null) _BGM.clip = _bgm;
         _BGM.Pause();
+        _audio.Pause();
     }
-
 }

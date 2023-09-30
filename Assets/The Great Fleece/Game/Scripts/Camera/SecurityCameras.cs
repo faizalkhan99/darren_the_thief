@@ -11,8 +11,6 @@ public class SecurityCameras : MonoBehaviour
 
     [SerializeField] MeshRenderer meshRenderer;
 
-    [SerializeField] private AudioClip _bgm;
-
     [SerializeField] private GameObject _gameOverCutscene;
 
     [SerializeField] private Animator _parentAnim;
@@ -37,7 +35,7 @@ public class SecurityCameras : MonoBehaviour
                 _parentAnim.speed = 0f;
                 if (_timer > _redDuration + 0.1f)
                 {
-                    AudioManager.Instance.PauseBGM(_bgm);
+                    AudioManager.Instance.PauseBGM();
                     _gameOverCutscene.SetActive(true);
                     _parentAnim.speed = 1f;
                     SecurityCameras[] array = FindObjectsOfType<SecurityCameras>();
