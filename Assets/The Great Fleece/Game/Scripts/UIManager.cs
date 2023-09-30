@@ -30,10 +30,7 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(0); //0 = MainMenuScene
     }
-    public void Quit()
-    {
-        Application.Quit();
-    }
+
     public void Play(string SceneName)
     {
 

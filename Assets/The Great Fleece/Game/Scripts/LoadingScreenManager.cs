@@ -42,5 +42,8 @@ public class LoadingScreenManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
     }
-
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
