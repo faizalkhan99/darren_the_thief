@@ -31693,7 +31693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22622a82b62456a4ea7b87439be31117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursorTexture: {fileID: 2800000, guid: 0f36a0049d1beef4bbd89aa8f3365682, type: 3}
+  _cursorTexture: {fileID: 2800000, guid: 35e54d098ae69e34a846abdea515894c, type: 3}
+  _hotSpot: {x: 998, y: 2000}
 --- !u!4 &1087801754
 Transform:
   m_ObjectHideFlags: 0
@@ -56851,8 +56852,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043896029}
-  m_LocalRotation: {x: 0.141394, y: 0.85249245, z: -0.29634312, w: 0.40674958}
-  m_LocalPosition: {x: -11.126, y: 16.785, z: 35.789}
+  m_LocalRotation: {x: 0.01163446, y: 0.706557, z: 0.0116204275, w: -0.70746505}
+  m_LocalPosition: {x: -0.2529683, y: 0.37172222, z: 30.26567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
