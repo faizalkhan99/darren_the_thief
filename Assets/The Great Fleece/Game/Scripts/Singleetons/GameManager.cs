@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        HasCard = false;
     }
 
     public void Update()
